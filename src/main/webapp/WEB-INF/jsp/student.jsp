@@ -12,34 +12,7 @@
 </head>
 <body>
 <h1>Students Data</h1>
-<%-- <form:form action="student.do" method="POST" commandName="student">
-	<table>
-		<tr>
-			<td>Student ID</td>
-			<td><form:input path="studentId" /></td>
-		</tr>
-		<tr>
-			<td>First name</td>
-			<td><form:input path="firstname" /></td>
-		</tr>
-		<tr>
-			<td>Last name</td>
-			<td><form:input path="lastname" /></td>
-		</tr>
-		<tr>
-			<td>Year Level</td>
-			<td><form:input path="yearLevel" /></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				<input type="submit" name="action" value="Add" />
-				<input type="submit" name="action" value="Edit" />
-				<input type="submit" name="action" value="Delete" />
-				<input type="submit" name="action" value="Search" />
-			</td>
-		</tr>
-	</table>
-</form:form> --%>
+
 <br>
 <table border="1">
 	<th>ID</th>
