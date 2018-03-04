@@ -7,28 +7,36 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
+
 @Entity
-@Table(name="STUDENTS")
+@Table(name="STUDENT")
 public class Student {
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO) //for autonumber
 	private int studentId;
-	@Column
+	@Column(name="firstname")
+	 
 	private String firstname;
 	@Column
+	
 	private String lastname;
 	@Column
 	private int yearLevel;
+	@Column
+	private long marks;
 	
 	public Student(){}
 	public Student(int studentId, String firstname, String lastname,
-			int yearLevel) {
+			int yearLevel,long marks) {
 		super();
 		this.studentId = studentId;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.yearLevel = yearLevel;
+		this.marks=marks;
 	}
 	public int getStudentId() {
 		return studentId;
@@ -53,6 +61,12 @@ public class Student {
 	}
 	public void setYearLevel(int yearLevel) {
 		this.yearLevel = yearLevel;
+	}
+	public long getMarks() {
+		return marks;
+	}
+	public void setMarks(long marks) {
+		this.marks = marks;
 	}
 	
 	

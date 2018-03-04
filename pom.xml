@@ -1,11 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>StudentSpringMvc</groupId>
-  <artifactId>StudentSpringMvc</artifactId>
+  <groupId>CRUDWebAppMavenized</groupId>
+  <artifactId>CRUDWebAppMavenized</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <properties>
-	<org.springframework.version>3.2.18.RELEASE</org.springframework.version>		
+  
+ <properties>
+	<org.springframework.version>3.0.5.RELEASE</org.springframework.version>		
   </properties>
   
   <dependencies>
@@ -14,7 +15,6 @@
 		<artifactId>spring-core</artifactId>
 		<version>${org.springframework.version}</version>
 	</dependency>
-	
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-beans</artifactId>
@@ -106,10 +106,19 @@
 		<type>jar</type>
 		<scope>compile</scope>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.5</version>
+    <scope>provided</scope>
+</dependency>
+	
 </dependencies>
   
+  
   <build>
-    <testSourceDirectory>src/webapp/test</testSourceDirectory>
+    <testSourceDirectory>src/main/test</testSourceDirectory>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -127,15 +136,11 @@
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>2.3.2</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.0.0</version>
       </plugin>
     </plugins>
   </build>
